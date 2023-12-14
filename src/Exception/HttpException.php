@@ -85,7 +85,7 @@ class HttpException extends RuntimeException
         } elseif (isset($data['error'])) {
             // oauth error
             $errors = [
-                new Error($data['error'], $data['error_description']),
+                new Error($data['error'], $data['error_description'] ?? ""),
             ];
         } else {
             // no errors
