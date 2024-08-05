@@ -817,6 +817,8 @@ class Mapper
                 return $expanded ? $this->injectSell($data) : new Sell($data['resource_path']);
             case ResourceType::TRANSACTION:
                 return $expanded ? $this->injectTransaction($data) : new Transaction(null, $data['resource_path']);
+            case "phone":
+                return $expanded ? $this->injectTransaction($data) : new Transaction(null, $data['resource_path']);
             case ResourceType::USER:
                 return $expanded ? $this->injectUser($data) : new User($data['resource_path']);
             case ResourceType::WITHDRAWAL:
