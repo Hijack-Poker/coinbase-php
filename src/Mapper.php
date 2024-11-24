@@ -149,6 +149,10 @@ class Mapper
             $data['currency'] = $data['amount']['currency'];
         }
 
+        if (isset($data['currency'])) {
+            $data['currency'] = $data['currency'];
+        }
+
         // amount
         if (isset($data['amount']['amount'])) {
             $data['amount'] = $data['amount']['amount'];
