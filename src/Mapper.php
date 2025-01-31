@@ -499,8 +499,8 @@ class Mapper
 
         if (isset($data['pagination'])) {
             $coll = new ResourceCollection(
-                $data['pagination']['previous_uri'],
-                $data['pagination']['next_uri']
+                $data['pagination']['previous_uri'] ?? null,
+                $data['pagination']['next_uri'] ?? null
             );
         } else {
             $coll = new ResourceCollection();
